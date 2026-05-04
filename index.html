@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- ШРИФТ E-UKRAINE --- */
+        /* --- ШРИФТ E-UKRAINE (TTF) --- */
         @font-face {
             font-family: 'e-Ukraine';
-            src: url('e-Ukraine-Regular.otf') format('opentype');
+            src: url('e-Ukraine-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -20,7 +20,7 @@
 
         @font-face {
             font-family: 'e-Ukraine';
-            src: url('e-Ukraine-Bold.otf') format('opentype');
+            src: url('e-Ukraine-Bold.ttf') format('truetype');
             font-weight: bold;
             font-style: normal;
             font-display: swap;
@@ -57,7 +57,7 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'e-Ukraine', sans-serif; /* ЗАМІНА НА E-UKRAINE */
+            font-family: 'e-Ukraine', sans-serif; /* Використання шрифту */
             background-color: var(--bg-color);
             color: var(--text-main);
             height: 100vh;
@@ -85,34 +85,36 @@
             padding: 0;
             text-align: left;
             text-transform: none; /* НЕ ВЕЛИКІ ЛІТЕРИ */
+            font-weight: normal; /* Regular за замовчуванням */
         }
 
-        h1 { font-size: 56px; line-height: 60px; font-weight: regular; }
-        h2 { font-size: 38px; line-height: 40px; font-weight: regular; }
-        h3 { font-size: 28px; line-height: 32px; font-weight: regular; }
-        h4 { font-size: 24px; line-height: 28px; font-weight: regular; }
-        h5 { font-size: 20px; line-height: 24px; font-weight: regular; }
-        h6 { font-size: 18px; line-height: 28px; font-weight: regular; }
-        h7 { font-size: 16px; line-height: 24px; font-weight: regular; }
+        h1 { font-size: 56px; line-height: 60px; }
+        h2 { font-size: 38px; line-height: 40px; }
+        h3 { font-size: 28px; line-height: 32px; }
+        h4 { font-size: 24px; line-height: 28px; }
+        h5 { font-size: 20px; line-height: 24px; }
+        h6 { font-size: 18px; line-height: 28px; }
+        h7 { font-size: 16px; line-height: 24px; }
 
         p, span, div, input, select, button {
             font-size: 16px;
             line-height: 24px;
-            font-weight: light; /* ОСНОВНИЙ ТЕКСТ — LIGHT */
+            font-weight: 300; /* Light для основного тексту */
             text-align: left;
             text-transform: none;
+            font-family: 'e-Ukraine', sans-serif;
         }
 
         .form-label, .item-subtitle, .service-desc, .user-greeting {
             font-size: 13px;
             line-height: 18px;
-            font-weight: regular;
+            font-weight: normal; /* Regular для пояснювального тексту */
         }
 
         a, .nav-item span, .status-badge {
             font-size: 12px;
             line-height: 16px;
-            font-weight: regular;
+            font-weight: normal; /* Regular для посилань */
         }
 
         /* --- AUTH SCREEN STYLES --- */
@@ -172,7 +174,7 @@
         }
 
         .form-select {
-            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%238e8e93%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-image: url("image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%238e8e93%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
             background-repeat: no-repeat;
             background-position: right 15px top 50%;
             background-size: 12px auto;
